@@ -9,15 +9,9 @@ import {
   Clock,
 } from "@phosphor-icons/react/dist/ssr";
 import { Logo } from "@/components/brand/Logo";
-import { SITE, WHATSAPP_NUMBER } from "@/lib/constants";
-
-const SOCIALS = [
-  { href: SITE.instagram, label: "Instagram", Icon: InstagramLogo },
-  { href: SITE.facebook, label: "Facebook", Icon: FacebookLogo },
-  { href: SITE.tiktok, label: "TikTok", Icon: TiktokLogo },
-  { href: `https://wa.me/${WHATSAPP_NUMBER}`, label: "WhatsApp", Icon: WhatsappLogo },
-  // Solo se muestran las redes con un enlace confirmado en lib/constants.ts.
-].filter((s) => s.href);
+import { SITE } from "@/lib/constants";
+import { readSettings } from "@/lib/store";
+import { formatWhatsappLabel } from "@/lib/format";
 
 const TIENDA = [
   { href: "/catalogo", label: "Catálogo completo" },
@@ -32,7 +26,16 @@ const AYUDA = [
   { href: "/carrito", label: "Mi cotización" },
 ];
 
-export function Footer() {
+export async function Footer() {
+  const settings = await readSettings();
+  const SOCIALS = [
+    { href: SITE.instagram, label: "Instagram", Icon: InstagramLogo },
+    { href: SITE.facebook, label: "Facebook", Icon: FacebookLogo },
+    { href: SITE.tiktok, label: "TikTok", Icon: TiktokLogo },
+    { href: `https://wa.me/${settings.whatsapp}`, label: "WhatsApp", Icon: WhatsappLogo },
+    // Solo se muestran las redes con un enlace confirmado en lib/constants.ts.
+  ].filter((s) => s.href);
+
   return (
     <footer className="bg-black text-white">
       <div className="shell grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.1fr]">
@@ -65,20 +68,20 @@ export function Footer() {
         <div className="flex flex-col gap-4">
           <p className="label text-white/45">Contacto</p>
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}`}
+            href={`https://wa.me/${settings.whatsapp}`}
             target="_blank"
             rel="noreferrer"
             className="flex items-start gap-2.5 text-sm text-white/75 hover:text-orange-500"
           >
             <WhatsappLogo weight="fill" className="mt-0.5 size-4 shrink-0" />
-            {SITE.phoneDisplay}
+            {formatWhatsappLabel(settings.whatsapp)}
           </a>
           <a
-            href={`mailto:${SITE.email}`}
+            href={`mailto:${settings.contactEmail}`}
             className="flex items-start gap-2.5 text-sm text-white/75 hover:text-orange-500"
           >
             <EnvelopeSimple weight="fill" className="mt-0.5 size-4 shrink-0" />
-            {SITE.email}
+            {settings.contactEmail}
           </a>
           <p className="flex items-start gap-2.5 text-sm text-white/75">
             <Clock weight="fill" className="mt-0.5 size-4 shrink-0" />

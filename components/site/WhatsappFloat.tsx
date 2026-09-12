@@ -1,15 +1,15 @@
 "use client";
 
 import { WhatsappLogo } from "@phosphor-icons/react";
-import { WHATSAPP_NUMBER, SITE } from "@/lib/constants";
+import type { Settings } from "@/lib/types";
 
-export function WhatsappFloat() {
+export function WhatsappFloat({ settings }: { settings: Settings }) {
   const text = encodeURIComponent(
-    `${SITE.quoteIntro.replace("estos equipos", "un equipo")} Quisiera que me ayuden a elegir.`,
+    `${settings.quoteIntro.replace("estos equipos", "un equipo")} Quisiera que me ayuden a elegir.`,
   );
   return (
     <a
-      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`}
+      href={`https://wa.me/${settings.whatsapp}?text=${text}`}
       target="_blank"
       rel="noreferrer"
       aria-label="Escríbenos por WhatsApp"

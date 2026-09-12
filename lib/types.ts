@@ -25,6 +25,8 @@ export type Product = {
   battery: string;
   description: string;
   accent: string;
+  /** Foto real, subida desde el panel admin o sembrada en el JSON. Sin ella, cae al ícono vectorial. */
+  image?: string;
 };
 
 export type CartLine = {
@@ -35,6 +37,7 @@ export type CartLine = {
   price: number;
   initialFrom: number;
   accent: string;
+  image?: string;
   qty: number;
 };
 
@@ -47,3 +50,31 @@ export type Branch = {
   address: string;
   hours: string;
 };
+
+/** Campos que un admin puede sobrescribir sin tocar data/products.json. */
+export type ProductOverride = {
+  price?: number;
+  compareAtPrice?: number;
+  initialFrom?: number;
+  installmentsMax?: number;
+  badge?: "Oferta" | "Nuevo" | "Más vendido";
+  description?: string;
+  image?: string;
+  updatedAt: string;
+};
+
+export type Settings = {
+  whatsapp: string;
+  whatsappLabel: string;
+  quoteIntro: string;
+  contactEmail: string;
+};
+
+export type TrackEvent =
+  | { type: "search"; term: string; results: number }
+  | { type: "view"; slug: string; sku: string; name: string; brand: string }
+  | { type: "cart_add"; slug: string; sku: string; name: string; qty: number }
+  | { type: "quote"; lines: number; units: number }
+  | { type: "filter"; facet: "brand" | "gama"; value: string };
+
+export type StoredEvent = TrackEvent & { at: string };

@@ -1,16 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Minus, Plus, ShoppingBagOpen, WhatsappLogo, Check } from "@phosphor-icons/react";
-import type { Product } from "@/lib/types";
+import type { Product, Settings } from "@/lib/types";
 import { useCart } from "@/components/cart/CartProvider";
 import { buildDirectQuoteUrl } from "@/lib/wa";
+import { track } from "@/lib/track";
 
-export function AddToCart({ product }: { product: Product }) {
+export function AddToCart({ product, settings }: { product: Product; settings: Settings }) {
   const cart = useCart();
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
+
+  useEffect(() => {
+    track({ type: "view", slug: product.slug, sku: product.sku, name: product.name, brand: product.brand });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [product.slug]);
 
   function handleAdd() {
     cart.add(
@@ -22,6 +28,7 @@ export function AddToCart({ product }: { product: Product }) {
         price: product.price,
         initialFrom: product.initialFrom,
         accent: product.accent,
+        image: product.image,
       },
       qty,
     );
@@ -73,7 +80,7 @@ export function AddToCart({ product }: { product: Product }) {
 
       <div className="flex flex-wrap items-center gap-3">
         <a
-          href={buildDirectQuoteUrl(product.name, product.sku)}
+          href={buildDirectQuoteUrl(product.name, product.sku, settings)}
           target="_blank"
           rel="noreferrer"
           className="flex flex-1 items-center justify-center gap-2 rounded-full bg-orange-500 px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-orange-600"

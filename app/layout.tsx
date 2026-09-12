@@ -1,11 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Sora, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/site/Header";
-import { Footer } from "@/components/site/Footer";
-import { SmoothScroll } from "@/components/site/SmoothScroll";
-import { WhatsappFloat } from "@/components/site/WhatsappFloat";
-import { CartProvider } from "@/components/cart/CartProvider";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -44,6 +39,11 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+/**
+ * Chrome de la tienda (Header, Footer, WhatsApp flotante) vive en
+ * app/(shop)/layout.tsx, no acá: /admin tiene su propio chrome (sidebar) y
+ * no debe cargar nunca el header/footer del cliente.
+ */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
@@ -57,15 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </style>
         </noscript>
       </head>
-      <body>
-        <CartProvider>
-          <SmoothScroll />
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <WhatsappFloat />
-        </CartProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

@@ -16,7 +16,12 @@ export function PhoneGlyph({
 }) {
   const gradId = `pg-${(uid ?? accent).replace(/[^a-zA-Z0-9]/g, "")}`;
   return (
-    <svg viewBox="0 0 160 220" className={className} aria-hidden="true">
+    <svg
+      viewBox="0 0 160 220"
+      className={className}
+      style={{ filter: "drop-shadow(0 12px 24px rgba(0,0,0,0.08))" }}
+      aria-hidden="true"
+    >
       <defs>
         <linearGradient id={gradId} x1="0" y1="0" x2="160" y2="220" gradientUnits="userSpaceOnUse">
           <stop stopColor={accent} stopOpacity="0.92" />

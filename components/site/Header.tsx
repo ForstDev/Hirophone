@@ -9,12 +9,10 @@ import {
   X,
   MagnifyingGlass,
   ShoppingBagOpen,
-  Phone,
   CaretRight,
 } from "@phosphor-icons/react";
 import { Logo } from "@/components/brand/Logo";
 import { useCart } from "@/components/cart/CartProvider";
-import { SITE } from "@/lib/constants";
 import { snap } from "@/lib/motion";
 
 const NAV = [
@@ -39,25 +37,10 @@ export function Header() {
 
   return (
     <div className="sticky top-0 z-40" style={{ zIndex: "var(--z-header)" }}>
-      <div className="bg-orange-500 text-white">
-        <div className="shell flex h-[38px] items-center justify-between gap-3 text-[0.7rem] sm:text-xs font-semibold">
-          <p className="truncate">
-            Celulares en cuotas, solo con tu DNI · Sin planes post pago
-          </p>
-          <a
-            href={`tel:+${SITE.phoneDisplay.replace(/\s/g, "")}`}
-            className="hidden shrink-0 items-center gap-1.5 sm:flex hover:opacity-90"
-          >
-            <Phone weight="fill" className="size-3.5" />
-            {SITE.phoneDisplay}
-          </a>
-        </div>
-      </div>
-
       <header className="border-b border-line bg-paper/95 backdrop-blur">
         <div className="shell flex h-[76px] items-center justify-between gap-4">
           <Link href="/" onClick={() => setMenuOpen(false)} className="shrink-0">
-            <Logo />
+            <Logo variant="compact" />
           </Link>
 
           <nav className="hidden items-center gap-7 lg:flex">

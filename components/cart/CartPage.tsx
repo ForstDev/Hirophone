@@ -4,9 +4,10 @@ import Link from "next/link";
 import { Trash, WhatsappLogo, ShoppingBagOpen, CaretRight } from "@phosphor-icons/react";
 import { useCart } from "./CartProvider";
 import { QtyStepper } from "./QtyStepper";
-import { PhoneGlyph } from "@/components/catalog/PhoneGlyph";
+import { ProductMedia } from "@/components/catalog/ProductMedia";
 import { formatPEN } from "@/lib/format";
 import { buildQuoteMessage, buildQuoteUrl } from "@/lib/wa";
+import { track } from "@/lib/track";
 
 export function CartPage() {
   const cart = useCart();
@@ -46,8 +47,14 @@ export function CartPage() {
             key={line.slug}
             className="flex items-center gap-4 rounded-lg border border-line bg-paper p-4"
           >
-            <div className="photo-plate size-20 shrink-0 rounded-md p-2">
-              <PhoneGlyph accent={line.accent} uid={`cart-${line.slug}`} className="h-full w-full" />
+            <div className="photo-plate relative size-20 shrink-0 rounded-md p-2">
+              <ProductMedia
+                image={line.image}
+                accent={line.accent}
+                uid={`cart-${line.slug}`}
+                alt={line.name}
+                className="h-full w-full"
+              />
             </div>
             <div className="min-w-0 flex-1">
               <p className="label text-ink-mute">{line.brand}</p>
@@ -98,14 +105,15 @@ export function CartPage() {
             Mensaje que se enviará
           </p>
           <pre className="thin-scroll mt-2 max-h-40 overflow-y-auto whitespace-pre-wrap rounded-md border border-line bg-paper p-3 text-xs text-ink-soft">
-            {buildQuoteMessage(cart.lines)}
+            {buildQuoteMessage(cart.lines, cart.settings)}
           </pre>
         </div>
 
         <a
-          href={buildQuoteUrl(cart.lines)}
+          href={buildQuoteUrl(cart.lines, cart.settings)}
           target="_blank"
           rel="noreferrer"
+          onClick={() => track({ type: "quote", lines: cart.lines.length, units: cart.units })}
           className="flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-bold text-white hover:brightness-95"
         >
           <WhatsappLogo weight="fill" className="size-4" />

@@ -4,8 +4,8 @@ import { featuredProducts } from "@/lib/catalog";
 import { ProductCard } from "@/components/catalog/ProductCard";
 import { Reveal } from "@/components/ui/Reveal";
 
-export function FeaturedProducts() {
-  const products = featuredProducts(8);
+export async function FeaturedProducts() {
+  const products = await featuredProducts(8);
 
   return (
     <section className="py-20">

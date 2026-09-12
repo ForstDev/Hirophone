@@ -7,7 +7,7 @@ import { Star, ShoppingBagOpen, Check } from "@phosphor-icons/react";
 import type { Product } from "@/lib/types";
 import { formatPEN } from "@/lib/format";
 import { useCart } from "@/components/cart/CartProvider";
-import { PhoneGlyph } from "./PhoneGlyph";
+import { ProductMedia } from "./ProductMedia";
 import { snap } from "@/lib/motion";
 
 const BADGE_STYLES: Record<string, string> = {
@@ -30,6 +30,7 @@ export function ProductCard({ product }: { product: Product }) {
       price: product.price,
       initialFrom: product.initialFrom,
       accent: product.accent,
+      image: product.image,
     });
     setAdded(true);
     window.setTimeout(() => setAdded(false), 1600);
@@ -50,10 +51,12 @@ export function ProductCard({ product }: { product: Product }) {
               {product.badge}
             </span>
           )}
-          <PhoneGlyph
+          <ProductMedia
+            image={product.image}
             accent={product.accent}
             uid={product.slug}
-            className="h-full w-full drop-shadow-[0_12px_24px_rgba(0,0,0,0.08)] transition-transform duration-300 group-hover:scale-105"
+            alt={product.name}
+            className="h-full w-full transition-transform duration-300 group-hover:scale-105"
           />
         </div>
 

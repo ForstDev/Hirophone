@@ -2,15 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CaretRight, Star } from "@phosphor-icons/react/dist/ssr";
-import { getAllProducts, getProductBySlug, relatedProducts } from "@/lib/catalog";
+import { getAllSlugs, getProductBySlug, relatedProducts } from "@/lib/catalog";
+import { readSettings } from "@/lib/store";
 import { formatPEN } from "@/lib/format";
-import { PhoneGlyph } from "@/components/catalog/PhoneGlyph";
+import { ProductMedia } from "@/components/catalog/ProductMedia";
 import { ProductCard } from "@/components/catalog/ProductCard";
 import { AddToCart } from "@/components/product/AddToCart";
 import { InstallmentEstimator } from "@/components/product/InstallmentEstimator";
 
 export function generateStaticParams() {
-  return getAllProducts().map((p) => ({ slug: p.slug }));
+  return getAllSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -19,7 +20,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
   if (!product) return {};
   return {
     title: product.name,
@@ -40,10 +41,11 @@ export default async function ProductPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
   if (!product) notFound();
 
-  const related = relatedProducts(product, 4);
+  const related = await relatedProducts(product, 4);
+  const settings = await readSettings();
 
   return (
     <div className="shell py-10">
@@ -60,16 +62,18 @@ export default async function ProductPage({
       </nav>
 
       <div className="grid gap-12 lg:grid-cols-2">
-        <div className="photo-plate relative sticky top-[132px] h-fit rounded-xl p-10">
+        <div className="photo-plate relative sticky top-[96px] h-fit rounded-xl p-10">
           {product.badge && (
             <span className="absolute left-8 top-8 rounded-full bg-orange-500 px-3 py-1 text-xs font-bold text-white">
               {product.badge}
             </span>
           )}
-          <PhoneGlyph
+          <ProductMedia
+            image={product.image}
             accent={product.accent}
             uid={`detail-${product.slug}`}
-            className="mx-auto w-full max-w-[260px]"
+            alt={product.name}
+            className="mx-auto aspect-[3/4] w-full max-w-[260px]"
           />
         </div>
 
@@ -130,7 +134,7 @@ export default async function ProductPage({
             </div>
           </div>
 
-          <AddToCart product={product} />
+          <AddToCart product={product} settings={settings} />
 
           <InstallmentEstimator
             price={product.price}

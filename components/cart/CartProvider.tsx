@@ -9,7 +9,8 @@ import {
   useState,
   useSyncExternalStore,
 } from "react";
-import type { CartLine } from "@/lib/types";
+import type { CartLine, Settings } from "@/lib/types";
+import { track } from "@/lib/track";
 
 const STORAGE_KEY = "hirophone.cart.v1";
 
@@ -19,6 +20,8 @@ type CartContextValue = {
   units: number;
   ready: boolean;
   isOpen: boolean;
+  settings: Settings;
+  /** Devuelve la cantidad resultante para que quien llama confirme la acción. */
   add: (line: Omit<CartLine, "qty">, qty?: number) => number;
   setQty: (slug: string, qty: number) => void;
   remove: (slug: string) => void;
@@ -40,7 +43,13 @@ function readStoredCart(): CartLine[] {
 
 const noopSubscribe = () => () => {};
 
-export function CartProvider({ children }: { children: React.ReactNode }) {
+export function CartProvider({
+  children,
+  settings,
+}: {
+  children: React.ReactNode;
+  settings: Settings;
+}) {
   const [lines, setLines] = useState<CartLine[]>(() =>
     typeof window === "undefined" ? [] : readStoredCart(),
   );
@@ -83,6 +92,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       }
       return [...prev, { ...line, qty }];
     });
+    track({ type: "cart_add", slug: line.slug, sku: line.sku, name: line.name, qty });
     return resulting;
   }, []);
 
@@ -107,6 +117,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       units: lines.reduce((n, l) => n + l.qty, 0),
       ready,
       isOpen,
+      settings,
       add,
       setQty,
       remove,
@@ -114,7 +125,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       open: () => setIsOpen(true),
       close: () => setIsOpen(false),
     }),
-    [lines, ready, isOpen, add, setQty, remove, clear],
+    [lines, ready, isOpen, settings, add, setQty, remove, clear],
   );
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

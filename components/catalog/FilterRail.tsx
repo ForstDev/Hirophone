@@ -3,18 +3,18 @@ import { BRANDS, GAMAS, brandCounts, gamaCounts } from "@/lib/catalog";
 import { toggleParam, isActive } from "@/lib/url";
 import type { CatalogFilters } from "@/lib/catalog";
 
-export function FilterRail({
+export async function FilterRail({
   params,
 }: {
   params: Record<string, string | undefined>;
 }) {
   const filters: CatalogFilters = { brand: params.brand, gama: params.gama, q: params.q };
-  const bCounts = brandCounts(filters);
-  const gCounts = gamaCounts(filters);
+  const bCounts = await brandCounts(filters);
+  const gCounts = await gamaCounts(filters);
   const hasFilters = Boolean(params.brand || params.gama || params.q);
 
   return (
-    <aside className="thin-scroll flex flex-col gap-8 lg:sticky lg:top-[132px] lg:max-h-[calc(100vh-160px)] lg:overflow-y-auto lg:pr-2">
+    <aside className="thin-scroll flex flex-col gap-8 lg:sticky lg:top-[96px] lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto lg:pr-2">
       <div className="flex items-center justify-between">
         <p className="label text-ink">Filtros</p>
         {hasFilters && (

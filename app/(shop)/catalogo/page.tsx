@@ -5,6 +5,7 @@ import { FilterRail } from "@/components/catalog/FilterRail";
 import { CatalogToolbar } from "@/components/catalog/CatalogToolbar";
 import { ProductCard } from "@/components/catalog/ProductCard";
 import { EmptyResults } from "@/components/catalog/EmptyResults";
+import { SearchTracker } from "@/components/catalog/SearchTracker";
 
 export const metadata: Metadata = {
   title: "Catálogo",
@@ -19,7 +20,7 @@ export default async function CatalogPage({
   searchParams: Promise<SearchParams>;
 }) {
   const params = await searchParams;
-  const products = filterProducts({
+  const products = await filterProducts({
     brand: params.brand,
     gama: params.gama,
     q: params.q,
@@ -28,6 +29,7 @@ export default async function CatalogPage({
 
   return (
     <div className="shell py-10">
+      {params.q && <SearchTracker term={params.q} results={products.length} />}
       <header className="mb-8">
         <p className="label text-orange-600">Catálogo</p>
         <h1 className="mt-2 font-display text-3xl font-extrabold text-ink sm:text-4xl">

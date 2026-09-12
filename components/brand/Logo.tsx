@@ -1,52 +1,65 @@
 import clsx from "clsx";
 
-export function LogoMark({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 40 40"
-      fill="none"
-      className={className}
-      aria-hidden="true"
-    >
-      <rect width="40" height="40" rx="12" fill="url(#hiro-mark-grad)" />
-      <path
-        d="M13 17.5C13 13.634 16.134 10.5 20 10.5C23.866 10.5 27 13.634 27 17.5V19"
-        stroke="white"
-        strokeWidth="2.3"
-        strokeLinecap="round"
-      />
-      <rect x="11.5" y="19" width="6" height="9.5" rx="2.4" fill="white" />
-      <rect x="22.5" y="19" width="6" height="9.5" rx="2.4" fill="white" fillOpacity="0.55" />
-      <defs>
-        <linearGradient id="hiro-mark-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#FF8626" />
-          <stop offset="1" stopColor="#E85A00" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-}
+/**
+ * Logo real de Hirophone (public/logo.svg): un trazo monocromo en negro sobre
+ * transparente, con el ícono, "HIROPHONE" y la razón social "IMPORTACIONES
+ * H&R S.A.C." como una sola pieza (no vienen separados en el archivo). En el
+ * footer, sobre fondo negro, se invierte a blanco con un filtro CSS.
+ *
+ * A tamaños chicos la razón social queda ilegible, así que la variante
+ * "compact" recorta esa franja inferior con overflow-hidden y solo se ve
+ * ícono + "HIROPHONE" (header, sidebar del admin). La variante "full"
+ * (footer, pantalla de login) muestra el logo completo.
+ */
+const RATIO = 173 / 100;
 
 export function Logo({
   className,
   tone = "light",
-  markClassName,
+  variant = "full",
+  size = variant === "compact" ? 48 : 64,
 }: {
   className?: string;
   tone?: "light" | "dark";
-  markClassName?: string;
+  variant?: "full" | "compact";
+  /** Alto visible en px. En "compact" es el alto ya recortado (sin la razón social). */
+  size?: number;
 }) {
-  return (
-    <span className={clsx("inline-flex items-center gap-2.5", className)}>
-      <LogoMark className={clsx("h-9 w-9 shrink-0", markClassName)} />
+  const invert = tone === "dark" && "brightness-0 invert";
+
+  if (variant === "compact") {
+    // La razón social ocupa ~14% del alto total del archivo: se agranda la
+    // imagen y se recorta ese sobrante con el contenedor.
+    const rendered = size / 0.86;
+    return (
       <span
-        className={clsx(
-          "font-display text-[1.35rem] font-extrabold tracking-tight leading-none",
-          tone === "light" ? "text-ink" : "text-white",
-        )}
+        className={clsx("relative inline-block overflow-hidden", className)}
+        style={{ height: size, width: size * RATIO }}
       >
-        Hiro<span className="text-orange-500">phone</span>
+        {/* eslint-disable-next-line @next/next/no-img-element -- SVG local recortado, no necesita el optimizador */}
+        <img
+          src="/logo.svg"
+          alt="Hirophone"
+          width={173}
+          height={100}
+          className={clsx("absolute left-0 top-0 w-auto", invert)}
+          style={{ height: rendered }}
+        />
       </span>
+    );
+  }
+
+  return (
+    <span className={clsx("inline-flex items-center", className)}>
+      {/* eslint-disable-next-line @next/next/no-img-element -- SVG local, no necesita el optimizador */}
+      <img
+        src="/logo.svg"
+        alt="Hirophone — Importaciones H&R S.A.C."
+        width={173}
+        height={100}
+        className={clsx("w-auto", invert)}
+        style={{ height: size }}
+      />
     </span>
   );
 }
