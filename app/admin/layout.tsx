@@ -27,7 +27,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       <aside className="flex shrink-0 flex-col border-b border-line bg-ink text-white lg:sticky lg:top-0 lg:h-[100dvh] lg:w-[236px] lg:border-b-0 lg:border-r lg:border-white/10">
         <div className="flex items-center justify-between px-5 py-5 lg:block">
           <Link href="/" className="inline-block transition-opacity hover:opacity-70">
-            <Logo tone="dark" variant="compact" size={30} />
+            <Logo variant="compact" size={30} />
           </Link>
           <p className="label mt-1 hidden text-white/40 lg:block">Panel</p>
         </div>

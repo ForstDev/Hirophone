@@ -8,7 +8,11 @@
     "gama": "Entrada",
     "storageGb": 128,
     "ramGb": 4,
-    "colors": ["Negro", "Azul", "Verde"],
+    "colors": [
+      "Negro",
+      "Azul",
+      "Verde"
+    ],
     "price": 549,
     "compareAtPrice": 699,
     "initialFrom": 99,
@@ -21,7 +25,8 @@
     "camera": "50 MP + macro",
     "battery": "5000 mAh",
     "description": "El punto de entrada más pedido: pantalla grande de 90Hz, batería para todo el día y precio accesible con tu DNI.",
-    "accent": "#FE6601"
+    "accent": "#FE6601",
+    "image": "/products/xiaomi-redmi-13c.png"
   },
   {
     "id": "p02",
@@ -32,7 +37,10 @@
     "gama": "Entrada",
     "storageGb": 128,
     "ramGb": 6,
-    "colors": ["Negro", "Lila"],
+    "colors": [
+      "Negro",
+      "Lila"
+    ],
     "price": 649,
     "initialFrom": 99,
     "installmentsMax": 12,
@@ -44,7 +52,8 @@
     "camera": "32 MP IA",
     "battery": "5160 mAh",
     "description": "La renovación del más vendido de Xiaomi, con más RAM y una cámara pensada para redes sociales.",
-    "accent": "#FF8626"
+    "accent": "#FF8626",
+    "image": "/products/xiaomi-redmi-14c.png"
   },
   {
     "id": "p03",
@@ -55,7 +64,11 @@
     "gama": "Media",
     "storageGb": 256,
     "ramGb": 8,
-    "colors": ["Negro", "Verde menta", "Azul hielo"],
+    "colors": [
+      "Negro",
+      "Verde menta",
+      "Azul hielo"
+    ],
     "price": 899,
     "compareAtPrice": 1099,
     "initialFrom": 129,
@@ -68,7 +81,8 @@
     "camera": "108 MP OIS",
     "battery": "5000 mAh, carga 33W",
     "description": "Pantalla AMOLED de verdad, cámara de 108 MP y el equilibrio favorito entre precio y equipo top de gama media.",
-    "accent": "#FE6601"
+    "accent": "#FE6601",
+    "image": "/products/xiaomi-redmi-note-13.png"
   },
   {
     "id": "p04",
@@ -79,7 +93,10 @@
     "gama": "Media",
     "storageGb": 256,
     "ramGb": 8,
-    "colors": ["Negro medianoche", "Lavanda"],
+    "colors": [
+      "Negro medianoche",
+      "Lavanda"
+    ],
     "price": 1199,
     "initialFrom": 179,
     "installmentsMax": 18,
@@ -90,7 +107,8 @@
     "camera": "200 MP OIS",
     "battery": "5100 mAh, carga 67W",
     "description": "Cámara de 200 MP con estabilización óptica y carga ultrarrápida de 67W, en un cuerpo con Gorilla Glass Victus.",
-    "accent": "#C24A00"
+    "accent": "#C24A00",
+    "image": "/products/xiaomi-redmi-note-13-pro.png"
   },
   {
     "id": "p05",
@@ -101,7 +119,10 @@
     "gama": "Media",
     "storageGb": 256,
     "ramGb": 8,
-    "colors": ["Negro", "Amarillo"],
+    "colors": [
+      "Negro",
+      "Amarillo"
+    ],
     "price": 1349,
     "initialFrom": 199,
     "installmentsMax": 18,
@@ -112,7 +133,8 @@
     "camera": "64 MP OIS",
     "battery": "5100 mAh, carga 67W",
     "description": "Rendimiento pensado para gamers: pantalla Dolby Vision, sonido estéreo y carga en menos de 45 minutos.",
-    "accent": "#FF8626"
+    "accent": "#FF8626",
+    "image": "/products/poco-x6.png"
   },
   {
     "id": "p06",
@@ -123,7 +145,10 @@
     "gama": "Alta",
     "storageGb": 512,
     "ramGb": 12,
-    "colors": ["Negro", "Azul"],
+    "colors": [
+      "Negro",
+      "Azul"
+    ],
     "price": 2699,
     "compareAtPrice": 2999,
     "initialFrom": 349,
@@ -136,7 +161,8 @@
     "camera": "Leica triple, 50 MP",
     "battery": "5000 mAh, carga 67W",
     "description": "Óptica Leica de fábrica y una pantalla de 144Hz para quienes quieren la gama alta de Xiaomi sin pagar el tope de la línea.",
-    "accent": "#16213E"
+    "accent": "#16213E",
+    "image": "/products/xiaomi-14t.png"
   },
   {
     "id": "p07",
@@ -147,7 +173,11 @@
     "gama": "Entrada",
     "storageGb": 128,
     "ramGb": 4,
-    "colors": ["Negro", "Plata", "Verde claro"],
+    "colors": [
+      "Negro",
+      "Plata",
+      "Verde claro"
+    ],
     "price": 599,
     "initialFrom": 99,
     "installmentsMax": 12,
@@ -169,7 +199,11 @@
     "gama": "Entrada",
     "storageGb": 128,
     "ramGb": 4,
-    "colors": ["Azul oscuro", "Amarillo claro", "Negro"],
+    "colors": [
+      "Azul oscuro",
+      "Amarillo claro",
+      "Negro"
+    ],
     "price": 749,
     "compareAtPrice": 899,
     "initialFrom": 109,
@@ -193,7 +227,11 @@
     "gama": "Media",
     "storageGb": 256,
     "ramGb": 8,
-    "colors": ["Azul claro", "Negro", "Lila"],
+    "colors": [
+      "Azul claro",
+      "Negro",
+      "Lila"
+    ],
     "price": 1399,
     "initialFrom": 199,
     "installmentsMax": 18,
@@ -204,7 +242,8 @@
     "camera": "50 MP OIS",
     "battery": "5000 mAh, carga 25W",
     "description": "Cuerpo con marco de aluminio, Gorilla Glass Victus+ y 5G, para quien quiere un Samsung que dure varios años.",
-    "accent": "#FF8626"
+    "accent": "#FF8626",
+    "image": "/products/samsung-galaxy-a35.jpg"
   },
   {
     "id": "p10",
@@ -215,7 +254,11 @@
     "gama": "Media",
     "storageGb": 256,
     "ramGb": 8,
-    "colors": ["Azul marino", "Lila", "Negro"],
+    "colors": [
+      "Azul marino",
+      "Lila",
+      "Negro"
+    ],
     "price": 1799,
     "compareAtPrice": 1999,
     "initialFrom": 249,
@@ -228,7 +271,8 @@
     "camera": "50 MP OIS",
     "battery": "5000 mAh, carga 25W",
     "description": "Lo más cerca de un Galaxy S a precio de gama media, con protección IP67 y una cámara que se defiende de noche.",
-    "accent": "#C24A00"
+    "accent": "#C24A00",
+    "image": "/products/samsung-galaxy-a55.jpg"
   },
   {
     "id": "p11",
@@ -239,7 +283,11 @@
     "gama": "Alta",
     "storageGb": 256,
     "ramGb": 8,
-    "colors": ["Gris titanio", "Violeta", "Ónix"],
+    "colors": [
+      "Gris titanio",
+      "Violeta",
+      "Ónix"
+    ],
     "price": 3299,
     "initialFrom": 429,
     "installmentsMax": 24,
@@ -250,7 +298,8 @@
     "camera": "Triple 50 MP + IA Galaxy",
     "battery": "4000 mAh, carga 25W",
     "description": "Las funciones de Galaxy AI —traducción en vivo, edición generativa— en el tamaño compacto que más se pide.",
-    "accent": "#16213E"
+    "accent": "#16213E",
+    "image": "/products/samsung-galaxy-s24.jpg"
   },
   {
     "id": "p12",
@@ -261,7 +310,10 @@
     "gama": "Alta",
     "storageGb": 512,
     "ramGb": 12,
-    "colors": ["Titanio negro", "Titanio gris"],
+    "colors": [
+      "Titanio negro",
+      "Titanio gris"
+    ],
     "price": 4899,
     "initialFrom": 599,
     "installmentsMax": 24,
@@ -273,7 +325,8 @@
     "camera": "Cuádruple 200 MP + zoom 5x",
     "battery": "5000 mAh, carga 45W",
     "description": "El tope de línea Samsung, con S Pen incluido y el zoom de 5x que más se pregunta en tienda.",
-    "accent": "#16213E"
+    "accent": "#16213E",
+    "image": "/products/samsung-galaxy-s24-ultra.jpg"
   },
   {
     "id": "p13",
@@ -284,7 +337,11 @@
     "gama": "Media",
     "storageGb": 128,
     "ramGb": 4,
-    "colors": ["Medianoche", "Azul", "Rosa"],
+    "colors": [
+      "Medianoche",
+      "Azul",
+      "Rosa"
+    ],
     "price": 2199,
     "compareAtPrice": 2499,
     "initialFrom": 299,
@@ -297,7 +354,8 @@
     "camera": "Dual 12 MP",
     "battery": "Hasta 19h de video",
     "description": "El iPhone más pedido en cuotas: sigue recibiendo iOS nuevo cada año y es la puerta de entrada más sensata a Apple.",
-    "accent": "#16213E"
+    "accent": "#16213E",
+    "image": "/products/iphone-13.jpg"
   },
   {
     "id": "p14",
@@ -308,7 +366,11 @@
     "gama": "Alta",
     "storageGb": 128,
     "ramGb": 6,
-    "colors": ["Medianoche", "Blanco estelar", "Azul"],
+    "colors": [
+      "Medianoche",
+      "Blanco estelar",
+      "Azul"
+    ],
     "price": 2799,
     "initialFrom": 349,
     "installmentsMax": 18,
@@ -319,7 +381,8 @@
     "camera": "Dual 12 MP, modo Acción",
     "battery": "Hasta 20h de video",
     "description": "Estabilización de imagen tipo Acción y detección de accidentes, en el tamaño que más se lleva en tienda.",
-    "accent": "#17140F"
+    "accent": "#17140F",
+    "image": "/products/iphone-14.jpg"
   },
   {
     "id": "p15",
@@ -330,7 +393,12 @@
     "gama": "Alta",
     "storageGb": 128,
     "ramGb": 6,
-    "colors": ["Negro", "Verde", "Rosa", "Azul"],
+    "colors": [
+      "Negro",
+      "Verde",
+      "Rosa",
+      "Azul"
+    ],
     "price": 3399,
     "initialFrom": 429,
     "installmentsMax": 24,
@@ -342,7 +410,8 @@
     "camera": "Principal 48 MP",
     "battery": "Hasta 20h de video",
     "description": "USB-C, Dynamic Island y cámara principal de 48 MP: el iPhone que más se cotiza para estrenar este año.",
-    "accent": "#16213E"
+    "accent": "#16213E",
+    "image": "/products/iphone-15.jpg"
   },
   {
     "id": "p16",
@@ -353,7 +422,10 @@
     "gama": "Alta",
     "storageGb": 256,
     "ramGb": 8,
-    "colors": ["Titanio natural", "Titanio azul"],
+    "colors": [
+      "Titanio natural",
+      "Titanio azul"
+    ],
     "price": 4999,
     "initialFrom": 649,
     "installmentsMax": 24,
@@ -364,7 +436,8 @@
     "camera": "Triple 48 MP + teleobjetivo",
     "battery": "Hasta 23h de video",
     "description": "Cuerpo de titanio, botón de Acción y el chip más rápido que Apple ha puesto en un iPhone hasta hoy.",
-    "accent": "#17140F"
+    "accent": "#17140F",
+    "image": "/products/iphone-15-pro.jpg"
   },
   {
     "id": "p17",
@@ -375,7 +448,10 @@
     "gama": "Entrada",
     "storageGb": 128,
     "ramGb": 4,
-    "colors": ["Azul marino", "Gris"],
+    "colors": [
+      "Azul marino",
+      "Gris"
+    ],
     "price": 549,
     "initialFrom": 99,
     "installmentsMax": 12,
@@ -386,7 +462,8 @@
     "camera": "50 MP",
     "battery": "5000 mAh",
     "description": "Android puro, casi sin apps de más, con el diseño curvo que caracteriza a Motorola en la gama de entrada.",
-    "accent": "#FE6601"
+    "accent": "#FE6601",
+    "image": "/products/moto-g24.png"
   },
   {
     "id": "p18",
@@ -397,7 +474,10 @@
     "gama": "Media",
     "storageGb": 256,
     "ramGb": 8,
-    "colors": ["Verde perla", "Negro"],
+    "colors": [
+      "Verde perla",
+      "Negro"
+    ],
     "price": 899,
     "compareAtPrice": 1049,
     "initialFrom": 139,
@@ -410,7 +490,8 @@
     "camera": "50 MP OIS",
     "battery": "5000 mAh, carga 30W",
     "description": "5G, cámara con estabilización óptica y una batería que aguanta jornadas largas, a precio de gama media honesto.",
-    "accent": "#FF8626"
+    "accent": "#FF8626",
+    "image": "/products/moto-g54.png"
   },
   {
     "id": "p19",
@@ -421,7 +502,10 @@
     "gama": "Alta",
     "storageGb": 256,
     "ramGb": 8,
-    "colors": ["Gris menta", "Beige arena"],
+    "colors": [
+      "Gris menta",
+      "Beige arena"
+    ],
     "price": 1899,
     "initialFrom": 259,
     "installmentsMax": 18,
@@ -433,7 +517,8 @@
     "camera": "50 MP OIS + ultra gran angular",
     "battery": "5000 mAh, carga 68W",
     "description": "Pantalla curva pOLED de 144Hz y certificación IP68, con acabado en piel vegana que se siente premium.",
-    "accent": "#16213E"
+    "accent": "#16213E",
+    "image": "/products/moto-edge-50.png"
   },
   {
     "id": "p20",
@@ -444,7 +529,10 @@
     "gama": "Media",
     "storageGb": 256,
     "ramGb": 8,
-    "colors": ["Negro medianoche", "Verde esmeralda"],
+    "colors": [
+      "Negro medianoche",
+      "Verde esmeralda"
+    ],
     "price": 849,
     "initialFrom": 129,
     "installmentsMax": 12,
@@ -455,7 +543,8 @@
     "camera": "108 MP",
     "battery": "5800 mAh, carga 35W",
     "description": "La batería más grande de esta lista y una cámara de 108 MP, para quien prioriza autonomía sobre todo lo demás.",
-    "accent": "#FF8626"
+    "accent": "#FF8626",
+    "image": "/products/honor-x7b.jpg"
   },
   {
     "id": "p21",
@@ -466,7 +555,10 @@
     "gama": "Alta",
     "storageGb": 256,
     "ramGb": 12,
-    "colors": ["Negro", "Verde"],
+    "colors": [
+      "Negro",
+      "Verde"
+    ],
     "price": 1399,
     "compareAtPrice": 1599,
     "initialFrom": 189,
@@ -479,6 +571,7 @@
     "camera": "108 MP OIS",
     "battery": "5800 mAh, carga 35W",
     "description": "Pantalla irrompible certificada por caídas de hasta 1.5 metros y AMOLED curvo, a precio de gama media.",
-    "accent": "#C24A00"
+    "accent": "#C24A00",
+    "image": "/products/honor-x9b.png"
   }
 ]

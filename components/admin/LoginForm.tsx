@@ -40,7 +40,7 @@ export function LoginForm({ next }: { next?: string }) {
   return (
     <div className="grid min-h-[100dvh] lg:grid-cols-2">
       <div className="relative hidden flex-col items-start justify-between bg-ink p-12 text-white lg:flex">
-        <Logo tone="dark" variant="compact" size={40} />
+        <Logo variant="compact" size={40} />
         <div>
           <h1 className="max-w-[16ch] font-display text-[42px] font-extrabold leading-[1.05] tracking-tight">
             Panel de <span className="text-orange-500">catálogo</span>

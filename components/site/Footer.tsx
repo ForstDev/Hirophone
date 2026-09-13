@@ -40,7 +40,7 @@ export async function Footer() {
     <footer className="bg-black text-white">
       <div className="shell grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.1fr]">
         <div className="flex flex-col gap-4">
-          <Logo tone="dark" />
+          <Logo />
           <p className="max-w-xs text-sm leading-relaxed text-white/60">
             {SITE.branchesCount} dentro de Real Plaza, Mall Aventura, Mall Plaza y Open
             Plaza en Lima y provincia. Financiamos tu smartphone solo con tu DNI y la

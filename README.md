@@ -70,20 +70,23 @@ e-commerce real, este prototipo usa:
 Ambos archivos están pensados para reemplazarse con la data real de Hirophone
 sin tocar componentes: solo hay que respetar la forma de `lib/types.ts`.
 
-### Fotos de producto: por qué no vienen ya cargadas
+### Fotos de producto
 
-No existe fotografía de producto por SKU en la web real de Hirophone, y las
-fotos oficiales de prensa de cada fabricante (Xiaomi, Samsung, Apple,
-Motorola, Honor) tienen derechos de autor — y para los modelos de este
-catálogo (2023-2024), muchas páginas oficiales ya redirigen al modelo actual
-en vez de mostrar la del lanzamiento, así que ni sacarlas "oficialmente" es
-confiable a esta altura.
+19 de los 21 equipos tienen foto real en `public/products/`, sacada de las
+páginas y newsrooms oficiales de cada fabricante (Xiaomi, Samsung, Apple,
+Motorola, Honor) — el detalle exacto de dónde salió cada una no queda
+registrado en el repo, así que antes de una campaña grande conviene
+confirmar con cada marca que el uso está permitido, o reemplazarlas por
+fotos propias del proveedor de Hirophone.
 
-Por eso cada tarjeta usa un ícono de celular vectorial
-(`components/catalog/PhoneGlyph.tsx`) coloreado con el acento del producto,
-**y el panel admin (`/admin/productos`) es la forma pensada para ir
-reemplazándolos** por las fotos reales de Hirophone o de su proveedor, subiendo
-un archivo o pegando una URL, producto por producto, sin tocar código.
+Quedan **2 sin foto** (Galaxy A05 y Galaxy A15): no encontré una imagen
+oficial limpia — sin texto promocional encima ni especificaciones erróneas —
+así que por ahora muestran el ícono vectorial de respaldo
+(`components/catalog/PhoneGlyph.tsx`) en vez de forzar una que quede mal.
+
+El panel admin (`/admin/productos`) es la forma de agregar, corregir o
+reemplazar cualquier foto —subiendo un archivo o pegando una URL— sin tocar
+código ni volver a desplegar.
 
 ---
 
