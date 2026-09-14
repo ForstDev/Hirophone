@@ -11,12 +11,9 @@ export async function FeaturedProducts() {
     <section className="py-20">
       <div className="shell">
         <Reveal className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="label text-orange-600">Destacados</p>
-            <h2 className="mt-3 font-display text-3xl font-extrabold text-ink sm:text-4xl">
-              Los más cotizados esta semana
-            </h2>
-          </div>
+          <h2 className="font-display text-3xl font-extrabold text-ink sm:text-4xl">
+            Los más cotizados esta semana
+          </h2>
           <Link
             href="/catalogo"
             className="flex items-center gap-1.5 text-sm font-bold text-ink-soft hover:text-orange-600"

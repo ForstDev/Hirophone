@@ -16,6 +16,6 @@ export const SITE = {
   instagram: "https://www.instagram.com/hirophone.pe/",
   facebook: "",
   tiktok: "",
-  hours: "Todos los días, 10:00 a.m. – 10:00 p.m.",
+  hours: "Todos los días, 10:00 a.m. - 10:00 p.m.",
   branchesCount: "40 tiendas",
 };

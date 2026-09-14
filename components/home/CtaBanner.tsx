@@ -20,7 +20,7 @@ export function CtaBanner() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/catalogo"
-              className="flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-orange-600 hover:bg-orange-50"
+              className="flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-orange-600 transition active:scale-[0.97] hover:bg-orange-50"
             >
               Ver catálogo
               <CaretRight weight="bold" className="size-4" />
@@ -29,7 +29,7 @@ export function CtaBanner() {
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 rounded-full border-2 border-white px-6 py-3.5 text-sm font-bold text-white hover:bg-white/10"
+              className="flex items-center gap-2 rounded-full border-2 border-white px-6 py-3.5 text-sm font-bold text-white transition active:scale-[0.97] hover:bg-white/10"
             >
               <WhatsappLogo weight="fill" className="size-4" />
               Escríbenos ahora

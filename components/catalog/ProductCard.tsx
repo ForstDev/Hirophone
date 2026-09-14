@@ -91,7 +91,7 @@ export function ProductCard({ product }: { product: Product }) {
       <button
         type="button"
         onClick={quickAdd}
-        className="flex items-center justify-center gap-2 border-t border-line py-3 text-sm font-bold text-ink transition-colors hover:bg-orange-50 hover:text-orange-600"
+        className="flex items-center justify-center gap-2 border-t border-line py-3 text-sm font-bold text-ink transition active:scale-[0.98] hover:bg-orange-50 hover:text-orange-600"
       >
         {added ? (
           <>
@@ -101,7 +101,7 @@ export function ProductCard({ product }: { product: Product }) {
         ) : (
           <>
             <ShoppingBagOpen weight="bold" className="size-4" />
-            Agregar a cotización
+            Agregar
           </>
         )}
       </button>

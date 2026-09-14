@@ -29,8 +29,7 @@ export function HowItWorks() {
     <section className="bg-surface py-20">
       <div className="shell">
         <Reveal className="mx-auto max-w-xl text-center">
-          <p className="label text-orange-600">Cómo funciona</p>
-          <h2 className="mt-3 font-display text-3xl font-extrabold text-ink sm:text-4xl">
+          <h2 className="font-display text-3xl font-extrabold text-ink sm:text-4xl">
             De la tienda online a tu bolsillo, en 4 pasos
           </h2>
         </Reveal>

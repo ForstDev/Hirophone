@@ -24,8 +24,7 @@ export function Testimonials() {
     <section className="bg-surface py-20">
       <div className="shell">
         <Reveal className="mx-auto max-w-xl text-center">
-          <p className="label text-orange-600">Clientes Hirophone</p>
-          <h2 className="mt-3 font-display text-3xl font-extrabold text-ink sm:text-4xl">
+          <h2 className="font-display text-3xl font-extrabold text-ink sm:text-4xl">
             Lo que dicen en tienda
           </h2>
         </Reveal>

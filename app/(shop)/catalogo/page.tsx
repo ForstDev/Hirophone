@@ -31,8 +31,7 @@ export default async function CatalogPage({
     <div className="shell py-10">
       {params.q && <SearchTracker term={params.q} results={products.length} />}
       <header className="mb-8">
-        <p className="label text-orange-600">Catálogo</p>
-        <h1 className="mt-2 font-display text-3xl font-extrabold text-ink sm:text-4xl">
+        <h1 className="font-display text-3xl font-extrabold text-ink sm:text-4xl">
           {params.q ? `Resultados para “${params.q}”` : "Todos los equipos"}
         </h1>
         <p className="mt-2 max-w-xl text-sm text-ink-soft">

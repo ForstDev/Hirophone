@@ -57,7 +57,7 @@ export function Hero() {
           <motion.div variants={riseItem} className="flex flex-wrap items-center gap-3 pt-1">
             <Link
               href="/catalogo"
-              className="flex items-center gap-2 rounded-full bg-orange-500 px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-orange-600"
+              className="flex items-center gap-2 rounded-full bg-orange-500 px-6 py-3.5 text-sm font-bold text-white transition active:scale-[0.97] hover:bg-orange-600"
             >
               Ver catálogo
               <CaretRight weight="bold" className="size-4" />
@@ -66,7 +66,7 @@ export function Hero() {
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 rounded-full border-2 border-ink px-6 py-3.5 text-sm font-bold text-ink transition-colors hover:border-orange-500 hover:text-orange-600"
+              className="flex items-center gap-2 rounded-full border-2 border-ink px-6 py-3.5 text-sm font-bold text-ink transition active:scale-[0.97] hover:border-orange-500 hover:text-orange-600"
             >
               Cotizar por WhatsApp
             </a>

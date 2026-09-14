@@ -2,20 +2,20 @@
   {
     "id": "b01",
     "name": "Sucursal N.º 1",
-    "mall": "Mall Aventura Santa Anita — 1er Nivel",
+    "mall": "Mall Aventura Santa Anita - 1er Nivel",
     "city": "Santa Anita, Lima",
     "region": "Lima",
     "address": "Av. Metropolitana 4000, Santa Anita",
-    "hours": "10:00 a.m. – 10:00 p.m."
+    "hours": "10:00 a.m. - 10:00 p.m."
   },
   {
     "id": "b02",
     "name": "Sucursal N.º 2",
-    "mall": "Mall Aventura Santa Anita — 2do Nivel, frente a Starbucks",
+    "mall": "Mall Aventura Santa Anita - 2do Nivel, frente a Starbucks",
     "city": "Santa Anita, Lima",
     "region": "Lima",
     "address": "Av. Metropolitana 4000, Santa Anita",
-    "hours": "10:00 a.m. – 10:00 p.m."
+    "hours": "10:00 a.m. - 10:00 p.m."
   },
   {
     "id": "b03",
@@ -24,7 +24,7 @@
     "city": "Jesús María, Lima",
     "region": "Lima",
     "address": "Av. Gral. Salaverry 2370, Jesús María",
-    "hours": "10:00 a.m. – 10:00 p.m."
+    "hours": "10:00 a.m. - 10:00 p.m."
   },
   {
     "id": "b04",
@@ -33,7 +33,7 @@
     "city": "Ate, Lima",
     "region": "Lima",
     "address": "Carretera Central Km 5.5, Ate",
-    "hours": "10:00 a.m. – 10:00 p.m."
+    "hours": "10:00 a.m. - 10:00 p.m."
   },
   {
     "id": "b05",
@@ -42,7 +42,7 @@
     "city": "Surquillo, Lima",
     "region": "Lima",
     "address": "Av. Aviación 2545, Surquillo",
-    "hours": "10:00 a.m. – 10:00 p.m."
+    "hours": "10:00 a.m. - 10:00 p.m."
   },
   {
     "id": "b06",
@@ -51,7 +51,7 @@
     "city": "Callao",
     "region": "Lima",
     "address": "Av. Óscar R. Benavides 3866, Bellavista, Callao",
-    "hours": "10:00 a.m. – 10:00 p.m."
+    "hours": "10:00 a.m. - 10:00 p.m."
   },
   {
     "id": "b07",
@@ -60,7 +60,7 @@
     "city": "Lima Cercado",
     "region": "Lima",
     "address": "Jr. Cusco 286, Cercado de Lima",
-    "hours": "10:00 a.m. – 10:00 p.m."
+    "hours": "10:00 a.m. - 10:00 p.m."
   },
   {
     "id": "b08",
@@ -69,7 +69,7 @@
     "city": "San Juan de Miraflores, Lima",
     "region": "Lima",
     "address": "Av. Los Héroes 435, San Juan de Miraflores",
-    "hours": "10:00 a.m. – 10:00 p.m."
+    "hours": "10:00 a.m. - 10:00 p.m."
   },
   {
     "id": "b09",
@@ -78,7 +78,7 @@
     "city": "Trujillo",
     "region": "Provincia",
     "address": "Av. César Vallejo 1345, Trujillo",
-    "hours": "10:00 a.m. – 10:00 p.m."
+    "hours": "10:00 a.m. - 10:00 p.m."
   },
   {
     "id": "b10",
@@ -87,7 +87,7 @@
     "city": "Arequipa",
     "region": "Provincia",
     "address": "Av. Porongoche 500, Paucarpata, Arequipa",
-    "hours": "10:00 a.m. – 10:00 p.m."
+    "hours": "10:00 a.m. - 10:00 p.m."
   },
   {
     "id": "b11",
@@ -96,7 +96,7 @@
     "city": "Chiclayo",
     "region": "Provincia",
     "address": "Av. Salaverry 2210, Chiclayo",
-    "hours": "10:00 a.m. – 10:00 p.m."
+    "hours": "10:00 a.m. - 10:00 p.m."
   },
   {
     "id": "b12",
@@ -105,6 +105,6 @@
     "city": "Cajamarca",
     "region": "Provincia",
     "address": "Av. Vía de Evitamiento Norte 440, Cajamarca",
-    "hours": "10:00 a.m. – 10:00 p.m."
+    "hours": "10:00 a.m. - 10:00 p.m."
   }
 ]

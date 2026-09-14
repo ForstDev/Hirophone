@@ -33,7 +33,7 @@ export function ResetEvents() {
       <button
         onClick={reset}
         disabled={pending}
-        className="rounded-full bg-orange-500 px-3 py-1.5 text-[11.5px] font-bold text-white transition-colors hover:bg-orange-600 disabled:opacity-60"
+        className="rounded-full bg-orange-500 px-3 py-1.5 text-[11.5px] font-bold text-white transition enabled:active:scale-[0.97] hover:bg-orange-600 disabled:opacity-60"
       >
         {pending ? "Borrando" : "Confirmar"}
       </button>

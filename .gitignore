@@ -6,5 +6,7 @@ out
 *.tsbuildinfo
 next-env.d.ts
 .claude/
+.agents/
+skills-lock.json
 data/runtime/
 public/uploads/

@@ -13,7 +13,7 @@ export function WhatsappFloat({ settings }: { settings: Settings }) {
       target="_blank"
       rel="noreferrer"
       aria-label="Escríbenos por WhatsApp"
-      className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-[#25D366] py-3.5 pl-3.5 pr-4 text-sm font-bold text-white shadow-[0_10px_30px_-8px_rgba(0,0,0,0.4)] transition-transform hover:scale-105"
+      className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-[#25D366] py-3.5 pl-3.5 pr-4 text-sm font-bold text-white shadow-[0_10px_30px_-8px_rgba(0,0,0,0.4)] transition-transform hover:scale-105 active:scale-95"
       style={{ zIndex: "var(--z-drawer)" }}
     >
       <span className="relative flex size-6 items-center justify-center">

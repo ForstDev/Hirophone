@@ -354,7 +354,7 @@ export function ProductEditor({
             <button
               onClick={save}
               disabled={busy}
-              className="flex-1 rounded-full bg-orange-500 px-5 py-3.5 text-[12.5px] font-bold text-white transition-colors hover:bg-orange-600 disabled:bg-line-strong"
+              className="flex-1 rounded-full bg-orange-500 px-5 py-3.5 text-[12.5px] font-bold text-white transition enabled:active:scale-[0.98] hover:bg-orange-600 disabled:bg-line-strong"
             >
               {busy ? "Guardando" : "Guardar y publicar"}
             </button>

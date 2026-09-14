@@ -15,7 +15,7 @@ export function EmptyResults() {
       </div>
       <Link
         href="/catalogo"
-        className="rounded-full bg-orange-500 px-5 py-2.5 text-sm font-bold text-white hover:bg-orange-600"
+        className="rounded-full bg-orange-500 px-5 py-2.5 text-sm font-bold text-white transition active:scale-[0.97] hover:bg-orange-600"
       >
         Ver todo el catálogo
       </Link>

@@ -42,8 +42,7 @@ export default function NosotrosPage() {
       <section className="bg-surface">
         <div className="shell grid gap-10 py-14 lg:grid-cols-2 lg:items-center lg:py-20">
           <Reveal>
-            <p className="label text-orange-600">Quiénes somos</p>
-            <h1 className="mt-3 font-display text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
+            <h1 className="font-display text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
               Llevamos el financiamiento de celulares a todo el Perú
             </h1>
             <p className="mt-4 max-w-md text-ink-soft">
@@ -87,8 +86,7 @@ export default function NosotrosPage() {
       <section id="sucursales" className="scroll-mt-32 bg-surface py-16">
         <div className="shell">
           <Reveal>
-            <p className="label text-orange-600">Sucursales</p>
-            <h2 className="mt-3 font-display text-3xl font-extrabold text-ink sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold text-ink sm:text-4xl">
               Encuentra tu tienda más cercana
             </h2>
             <p className="mt-2 max-w-xl text-sm text-ink-soft">

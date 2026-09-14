@@ -116,7 +116,7 @@ export function LoginForm({ next }: { next?: string }) {
           <button
             type="submit"
             disabled={busy}
-            className="mt-6 w-full rounded-full bg-orange-500 px-6 py-4 text-sm font-bold text-white transition-colors hover:bg-orange-600 disabled:bg-line-strong"
+            className="mt-6 w-full rounded-full bg-orange-500 px-6 py-4 text-sm font-bold text-white transition enabled:active:scale-[0.98] hover:bg-orange-600 disabled:bg-line-strong"
           >
             {busy ? "Verificando" : "Entrar"}
           </button>

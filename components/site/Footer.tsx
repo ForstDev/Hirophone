@@ -12,6 +12,7 @@ import { Logo } from "@/components/brand/Logo";
 import { SITE } from "@/lib/constants";
 import { readSettings } from "@/lib/store";
 import { formatWhatsappLabel } from "@/lib/format";
+import { OpenCartButton } from "@/components/cart/OpenCartButton";
 
 const TIENDA = [
   { href: "/catalogo", label: "Catálogo completo" },
@@ -23,7 +24,6 @@ const TIENDA = [
 const AYUDA = [
   { href: "/nosotros", label: "Quiénes somos" },
   { href: "/nosotros#sucursales", label: "Nuestras sucursales" },
-  { href: "/carrito", label: "Mi cotización" },
 ];
 
 export async function Footer() {
@@ -63,7 +63,23 @@ export async function Footer() {
         </div>
 
         <FooterCol title="Tienda" items={TIENDA} />
-        <FooterCol title="Ayuda" items={AYUDA} />
+        <div className="flex flex-col gap-4">
+          <p className="label text-white/45">Ayuda</p>
+          <ul className="flex flex-col gap-2.5">
+            {AYUDA.map((item) => (
+              <li key={item.label}>
+                <Link href={item.href} className="text-sm text-white/75 hover:text-orange-500">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <OpenCartButton className="text-sm text-white/75 hover:text-orange-500">
+                Mi cotización
+              </OpenCartButton>
+            </li>
+          </ul>
+        </div>
 
         <div className="flex flex-col gap-4">
           <p className="label text-white/45">Contacto</p>
@@ -97,7 +113,7 @@ export async function Footer() {
       <div className="border-t border-white/10">
         <div className="shell flex flex-col gap-2 py-5 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Hirophone Perú. Todos los derechos reservados.</p>
-          <p>Propuesta de rediseño — catálogo y precios con fines demostrativos.</p>
+          <p>Propuesta de rediseño: catálogo y precios con fines demostrativos.</p>
         </div>
       </div>
     </footer>

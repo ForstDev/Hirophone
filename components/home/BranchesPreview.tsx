@@ -13,8 +13,7 @@ export function BranchesPreview() {
     <section className="bg-ink py-20 text-white">
       <div className="shell grid gap-10 lg:grid-cols-2 lg:items-center">
         <Reveal>
-          <p className="label text-orange-500">Nosotros</p>
-          <h2 className="mt-3 font-display text-3xl font-extrabold leading-tight sm:text-4xl">
+          <h2 className="font-display text-3xl font-extrabold leading-tight sm:text-4xl">
             Presencia en malls de todo el Perú
           </h2>
           <p className="mt-4 max-w-md text-white/70">
