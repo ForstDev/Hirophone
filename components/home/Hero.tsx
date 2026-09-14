@@ -41,11 +41,10 @@ export function Hero() {
               initial={{ y: "110%" }}
               animate={{ y: "0%" }}
               transition={expo(0.9, 0.1)}
-              className="font-display text-[2.5rem] font-extrabold leading-[1.05] text-ink sm:text-[3.2rem] lg:text-[3.6rem]"
+              className="font-display text-[2.25rem] font-extrabold leading-[1.08] text-ink sm:text-[2.75rem] lg:text-[2.35rem] xl:text-[2.9rem]"
             >
-              Estrena celular hoy.
-              <br />
-              Págalo en <span className="text-orange-500">cómodas cuotas</span>.
+              Estrena celular hoy, en{" "}
+              <span className="text-orange-500">cómodas cuotas</span>.
             </motion.h1>
           </div>
 
@@ -71,18 +70,6 @@ export function Hero() {
               Cotizar por WhatsApp
             </a>
           </motion.div>
-
-          <motion.div
-            variants={riseItem}
-            className="flex flex-wrap gap-x-6 gap-y-3 pt-4 text-sm font-semibold text-ink-soft"
-          >
-            {TRUST.map(({ icon: Icon, label }) => (
-              <span key={label} className="flex items-center gap-2">
-                <Icon weight="fill" className="size-4 text-orange-500" />
-                {label}
-              </span>
-            ))}
-          </motion.div>
         </motion.div>
 
         <motion.div
@@ -106,5 +93,20 @@ export function Hero() {
         </motion.div>
       </div>
     </section>
+  );
+}
+
+export function TrustStrip() {
+  return (
+    <div className="border-b border-line bg-paper">
+      <div className="shell flex flex-wrap justify-center gap-x-8 gap-y-3 py-5 text-sm font-semibold text-ink-soft sm:justify-start">
+        {TRUST.map(({ icon: Icon, label }) => (
+          <span key={label} className="flex items-center gap-2">
+            <Icon weight="fill" className="size-4 text-orange-500" />
+            {label}
+          </span>
+        ))}
+      </div>
+    </div>
   );
 }

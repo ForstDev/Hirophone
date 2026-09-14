@@ -32,7 +32,7 @@ export function CtaBanner() {
               className="flex items-center gap-2 rounded-full border-2 border-white px-6 py-3.5 text-sm font-bold text-white transition active:scale-[0.97] hover:bg-white/10"
             >
               <WhatsappLogo weight="fill" className="size-4" />
-              Escríbenos ahora
+              Cotizar por WhatsApp
             </a>
           </div>
         </Reveal>
