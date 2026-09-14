@@ -14,7 +14,7 @@ export default function NotFound() {
       </p>
       <Link
         href="/catalogo"
-        className="flex items-center gap-2 rounded-full bg-orange-500 px-6 py-3.5 text-sm font-bold text-white transition active:scale-[0.97] hover:bg-orange-600"
+        className="flex items-center gap-2 rounded-full bg-orange-600 px-6 py-4 text-sm font-bold text-white transition active:scale-[0.97] hover:bg-orange-700"
       >
         Ver catálogo
         <CaretRight weight="bold" className="size-4" />

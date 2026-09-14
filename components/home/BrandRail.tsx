@@ -3,24 +3,29 @@ import { BRANDS } from "@/lib/catalog";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function BrandRail() {
+  const loop = [...BRANDS, ...BRANDS];
+
   return (
-    <section className="border-y border-line bg-paper py-10">
-      <div className="shell">
-        <Reveal className="flex flex-wrap items-center justify-between gap-4">
-          <p className="label text-ink-mute">Marcas disponibles</p>
-          <div className="flex flex-wrap gap-2.5">
-            {BRANDS.map((brand) => (
-              <Link
-                key={brand}
-                href={`/catalogo?brand=${encodeURIComponent(brand)}`}
-                className="rounded-full border border-line px-5 py-2.5 text-sm font-bold text-ink-soft transition-colors hover:border-orange-400 hover:bg-orange-50 hover:text-orange-700"
-              >
-                {brand}
-              </Link>
-            ))}
-          </div>
-        </Reveal>
-      </div>
+    <section className="overflow-hidden border-y border-line bg-paper py-8">
+      <Reveal>
+        <p className="label mb-5 text-center text-ink-mute">Marcas disponibles</p>
+        <div className="flex w-max anim-marquee">
+          {[0, 1].map((group) => (
+            <div key={group} className="flex shrink-0 items-center" aria-hidden={group === 1}>
+              {loop.map((brand, i) => (
+                <Link
+                  key={`${group}-${brand}-${i}`}
+                  href={`/catalogo?brand=${encodeURIComponent(brand)}`}
+                  className="mx-5 shrink-0 font-display text-3xl font-extrabold text-line-strong transition-colors hover:text-orange-500 sm:text-4xl"
+                  tabIndex={group === 1 ? -1 : 0}
+                >
+                  {brand}
+                </Link>
+              ))}
+            </div>
+          ))}
+        </div>
+      </Reveal>
     </section>
   );
 }

@@ -129,7 +129,7 @@ export function SettingsForm({ settings }: { settings: Settings }) {
           <button
             type="submit"
             disabled={busy}
-            className="rounded-full bg-orange-500 px-7 py-3.5 text-sm font-bold text-white transition enabled:active:scale-[0.98] hover:bg-orange-600 disabled:bg-line-strong"
+            className="rounded-full bg-orange-600 px-7 py-4 text-sm font-bold text-white transition enabled:active:scale-[0.98] hover:bg-orange-700 disabled:bg-line-strong"
           >
             {busy ? "Guardando" : "Guardar ajustes"}
           </button>

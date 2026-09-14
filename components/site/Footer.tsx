@@ -64,7 +64,7 @@ export async function Footer() {
 
         <FooterCol title="Tienda" items={TIENDA} />
         <div className="flex flex-col gap-4">
-          <p className="label text-white/45">Ayuda</p>
+          <p className="label text-white/50">Ayuda</p>
           <ul className="flex flex-col gap-2.5">
             {AYUDA.map((item) => (
               <li key={item.label}>
@@ -82,7 +82,7 @@ export async function Footer() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <p className="label text-white/45">Contacto</p>
+          <p className="label text-white/50">Contacto</p>
           <a
             href={`https://wa.me/${settings.whatsapp}`}
             target="_blank"
@@ -111,7 +111,7 @@ export async function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="shell flex flex-col gap-2 py-5 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
+        <div className="shell flex flex-col gap-2 py-5 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Hirophone Perú. Todos los derechos reservados.</p>
           <p>Propuesta de rediseño: catálogo y precios con fines demostrativos.</p>
         </div>
@@ -129,7 +129,7 @@ function FooterCol({
 }) {
   return (
     <div className="flex flex-col gap-4">
-      <p className="label text-white/45">{title}</p>
+      <p className="label text-white/50">{title}</p>
       <ul className="flex flex-col gap-2.5">
         {items.map((item) => (
           <li key={item.label}>

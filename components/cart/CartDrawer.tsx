@@ -75,7 +75,7 @@ export function CartDrawer() {
                 <Link
                   href="/catalogo"
                   onClick={cart.close}
-                  className="flex items-center gap-2 rounded-full bg-orange-500 px-5 py-2.5 text-sm font-bold text-white transition active:scale-[0.97] hover:bg-orange-600"
+                  className="flex items-center gap-2 rounded-full bg-orange-600 px-5 py-2.5 text-sm font-bold text-white transition active:scale-[0.97] hover:bg-orange-700"
                 >
                   Ver catálogo
                   <CaretRight weight="bold" className="size-3.5" />
@@ -161,7 +161,7 @@ export function CartDrawer() {
                     onClick={() =>
                       track({ type: "quote", lines: cart.lines.length, units: cart.units })
                     }
-                    className="flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-bold text-white transition active:scale-[0.97] hover:brightness-95"
+                    className="flex items-center justify-center gap-2 rounded-full bg-[#15803D] px-6 py-4 text-sm font-bold text-white transition active:scale-[0.97] hover:brightness-110"
                   >
                     <WhatsappLogo weight="fill" className="size-4" />
                     Enviar cotización por WhatsApp

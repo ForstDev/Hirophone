@@ -34,7 +34,7 @@ export function BranchesPreview() {
 
           <Link
             href="/nosotros#sucursales"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-ink hover:bg-orange-50"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-bold text-ink hover:bg-orange-50"
           >
             <Storefront weight="bold" className="size-4" />
             Ver todas las sucursales

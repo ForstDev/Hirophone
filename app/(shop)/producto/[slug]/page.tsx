@@ -64,7 +64,7 @@ export default async function ProductPage({
       <div className="grid gap-12 lg:grid-cols-2">
         <div className="photo-plate relative sticky top-[96px] h-fit rounded-xl p-10">
           {product.badge && (
-            <span className="absolute left-8 top-8 rounded-full bg-orange-500 px-3 py-1 text-xs font-bold text-white">
+            <span className="absolute left-8 top-8 rounded-full bg-orange-600 px-3 py-1 text-xs font-bold text-white">
               {product.badge}
             </span>
           )}

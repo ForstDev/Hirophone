@@ -61,7 +61,7 @@ export function AddToCart({ product, settings }: { product: Product; settings: S
         <button
           type="button"
           onClick={handleAdd}
-          className="flex flex-1 items-center justify-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-bold text-white transition active:scale-[0.97] hover:bg-black"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full bg-ink px-6 py-4 text-sm font-bold text-white transition active:scale-[0.97] hover:bg-black"
         >
           {added ? (
             <>
@@ -82,7 +82,7 @@ export function AddToCart({ product, settings }: { product: Product; settings: S
           href={buildDirectQuoteUrl(product.name, product.sku, settings)}
           target="_blank"
           rel="noreferrer"
-          className="flex flex-1 items-center justify-center gap-2 rounded-full bg-orange-500 px-6 py-3.5 text-sm font-bold text-white transition active:scale-[0.97] hover:bg-orange-600"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full bg-orange-600 px-6 py-4 text-sm font-bold text-white transition active:scale-[0.97] hover:bg-orange-700"
         >
           <WhatsappLogo weight="fill" className="size-4" />
           Cotizar este equipo ahora

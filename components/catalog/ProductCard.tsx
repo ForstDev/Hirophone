@@ -11,7 +11,7 @@ import { ProductMedia } from "./ProductMedia";
 import { snap } from "@/lib/motion";
 
 const BADGE_STYLES: Record<string, string> = {
-  Oferta: "bg-orange-500 text-white",
+  Oferta: "bg-orange-600 text-white",
   Nuevo: "bg-navy text-white",
   "Más vendido": "bg-ink text-white",
 };

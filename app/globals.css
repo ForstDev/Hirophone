@@ -13,7 +13,7 @@
 @theme {
   --color-ink: #17140f;
   --color-ink-soft: #4a443c;
-  --color-ink-mute: #8a8378;
+  --color-ink-mute: #6b6459;
   --color-paper: #ffffff;
   --color-surface: #fbf8f5;
   --color-surface-2: #f2ede7;
@@ -151,12 +151,27 @@ html.lenis body {
   }
 }
 
+@keyframes hiro-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .anim-mask-up {
     animation: hiro-mask-up 0.9s var(--ease-out-expo) both;
   }
   .anim-rise {
     animation: hiro-rise 0.8s var(--ease-out-expo) both;
+  }
+  .anim-marquee {
+    animation: hiro-marquee 26s linear infinite;
+  }
+  .anim-marquee:hover {
+    animation-play-state: paused;
   }
 }
 
