@@ -29,13 +29,13 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           <Link href="/" className="inline-block transition-opacity hover:opacity-70">
             <Logo variant="compact" size={30} />
           </Link>
-          <p className="label mt-1 hidden text-white/40 lg:block">Panel</p>
+          <p className="label mt-1 hidden text-white/55 lg:block">Panel</p>
         </div>
 
         <AdminNav />
 
         <div className="mt-auto border-t border-white/10 px-5 py-4">
-          <p className="text-[11.5px] text-white/45">
+          <p className="text-[11.5px] text-white/55">
             Sesión: <span className="font-semibold text-white/80">{user}</span>
           </p>
           <div className="mt-3 flex flex-col gap-2">

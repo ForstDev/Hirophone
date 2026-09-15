@@ -48,7 +48,7 @@ export function Hero() {
               className="font-display text-[2.25rem] font-extrabold leading-[1.08] text-ink sm:text-[2.75rem] lg:text-[2.35rem] xl:text-[2.9rem]"
             >
               Estrena celular hoy, en{" "}
-              <span className="text-orange-500">cómodas cuotas</span>.
+              <span className="text-orange-600">cómodas cuotas</span>.
             </motion.h1>
           </div>
 

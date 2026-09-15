@@ -4,7 +4,7 @@ import { CaretRight } from "@phosphor-icons/react/dist/ssr";
 export default function NotFound() {
   return (
     <div className="shell flex flex-col items-center gap-5 py-32 text-center">
-      <span className="code-type text-6xl font-extrabold text-orange-500">404</span>
+      <span className="code-type text-6xl font-extrabold text-orange-600">404</span>
       <h1 className="font-display text-2xl font-extrabold text-ink">
         No encontramos esta página
       </h1>

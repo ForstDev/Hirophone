@@ -16,7 +16,7 @@ export function BrandRail() {
                 <Link
                   key={`${group}-${brand}-${i}`}
                   href={`/catalogo?brand=${encodeURIComponent(brand)}`}
-                  className="mx-5 shrink-0 font-display text-3xl font-extrabold text-line-strong transition-colors hover:text-orange-500 sm:text-4xl"
+                  className="mx-5 shrink-0 font-display text-3xl font-extrabold text-line-strong transition-colors hover:text-orange-600 sm:text-4xl"
                   tabIndex={group === 1 ? -1 : 0}
                 >
                   {brand}

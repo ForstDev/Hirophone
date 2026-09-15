@@ -363,7 +363,7 @@ export function ProductEditor({
               <button
                 onClick={restore}
                 disabled={busy}
-                className="inline-flex items-center gap-1.5 rounded-full border border-line-strong px-4 py-3.5 text-xs font-bold text-ink-mute transition-colors hover:border-ink hover:text-ink disabled:opacity-50"
+                className="inline-flex items-center gap-1.5 rounded-full border border-line-strong px-4 py-4 text-xs font-bold text-ink-mute transition-colors hover:border-ink hover:text-ink disabled:opacity-50"
               >
                 <ArrowCounterClockwise size={14} weight="bold" />
                 Restaurar

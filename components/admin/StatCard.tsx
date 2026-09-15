@@ -18,7 +18,7 @@ export function StatCard({
           "code-type font-bold leading-none tracking-tight " +
           (compact ? "text-[22px]" : "text-[32px]") +
           " " +
-          (accent ? "text-orange-500" : warn && value > 0 ? "text-ink-soft" : "text-ink")
+          (accent ? "text-orange-600" : warn && value > 0 ? "text-ink-soft" : "text-ink")
         }
       >
         {value.toLocaleString("es")}

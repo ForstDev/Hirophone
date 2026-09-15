@@ -42,7 +42,7 @@ export function LoginForm({ next }: { next?: string }) {
       <div className="relative hidden flex-col items-start justify-between bg-ink p-12 text-white lg:flex">
         <Logo variant="compact" size={40} />
         <div>
-          <h1 className="max-w-[16ch] font-display text-[42px] font-extrabold leading-[1.05] tracking-tight">
+          <h1 className="max-w-[16ch] font-display text-5xl font-extrabold leading-[1.05] tracking-tight">
             Panel de <span className="text-orange-500">catálogo</span>
           </h1>
           <p className="mt-5 max-w-[42ch] text-sm leading-relaxed text-white/55">
@@ -50,7 +50,7 @@ export function LoginForm({ next }: { next?: string }) {
             clientes y qué se está cotizando por WhatsApp.
           </p>
         </div>
-        <p className="text-[11.5px] text-white/35">Propuesta de e-commerce para Hirophone Perú.</p>
+        <p className="text-[11.5px] text-white/55">Propuesta de e-commerce para Hirophone Perú.</p>
       </div>
 
       <div className="flex items-center justify-center bg-paper px-6 py-16">
@@ -81,7 +81,7 @@ export function LoginForm({ next }: { next?: string }) {
                 onChange={(e) => setUser(e.target.value)}
                 autoComplete="username"
                 required
-                className="h-12 rounded-md border border-line-strong bg-paper px-3.5 text-sm text-ink focus:border-orange-500 focus:outline-none"
+                className="h-12 rounded-md border border-line-strong bg-paper px-4 text-sm text-ink focus:border-orange-600 focus:outline-none"
               />
             </div>
 
@@ -96,7 +96,7 @@ export function LoginForm({ next }: { next?: string }) {
                 onChange={(e) => setPass(e.target.value)}
                 autoComplete="current-password"
                 required
-                className="h-12 rounded-md border border-line-strong bg-paper px-3.5 text-sm text-ink focus:border-orange-500 focus:outline-none"
+                className="h-12 rounded-md border border-line-strong bg-paper px-4 text-sm text-ink focus:border-orange-600 focus:outline-none"
               />
             </div>
           </div>
@@ -106,7 +106,7 @@ export function LoginForm({ next }: { next?: string }) {
               initial={{ opacity: 0, y: -6 }}
               animate={{ opacity: 1, y: 0 }}
               role="alert"
-              className="mt-4 flex items-start gap-2 rounded-md border border-orange-500 bg-orange-50 px-3 py-2.5 text-[12.5px] font-medium text-orange-700"
+              className="mt-4 flex items-start gap-2 rounded-md border border-orange-500 bg-orange-50 px-3 py-2.5 text-[12.5px] font-medium text-orange-800"
             >
               <WarningCircle size={16} weight="fill" className="mt-px shrink-0" />
               {error}
